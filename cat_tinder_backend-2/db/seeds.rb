@@ -1,6 +1,6 @@
 cats = [
   {
-    name: 'Felix',
+    firstName: 'Felix',
     lastName: 'DeCat',
     age: 2,
     enjoys: 'Long naps on the couch, and a warm fire.'
