@@ -344,3 +344,1476 @@ Processing by CatsController#create as HTML
   Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
 Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (2.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:36:06.465629"], ["updated_at", "2020-08-20 18:36:06.465629"]]
+  [1m[35m (2.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:36:06.537788"], ["updated_at", "2020-08-20 18:36:06.537788"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4022)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:36:06 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.9ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:40:47.631617"], ["updated_at", "2020-08-20 18:40:47.631617"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:40:47.675746"], ["updated_at", "2020-08-20 18:40:47.675746"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:40:47 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:41:19.130868"], ["updated_at", "2020-08-20 18:41:19.130868"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:41:19.175043"], ["updated_at", "2020-08-20 18:41:19.175043"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:41:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:42:01.394758"], ["updated_at", "2020-08-20 18:42:01.394758"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 633)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:42:01.440863"], ["updated_at", "2020-08-20 18:42:01.440863"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:42:01 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (1.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:43:37.746582"], ["updated_at", "2020-08-20 18:43:37.746582"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (2.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:43:37.792479"], ["updated_at", "2020-08-20 18:43:37.792479"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:43:37 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:48:38.767449"], ["updated_at", "2020-08-20 18:48:38.767449"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (7.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 7.0ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:48:38.811754"], ["updated_at", "2020-08-20 18:48:38.811754"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:38 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.8ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:48:51.826358"], ["updated_at", "2020-08-20 18:48:51.826358"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:48:51.873378"], ["updated_at", "2020-08-20 18:48:51.873378"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:48:51 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (1.1ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:49:43.430022"], ["updated_at", "2020-08-20 18:49:43.430022"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:49:43.472671"], ["updated_at", "2020-08-20 18:49:43.472671"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:49:59.853661"], ["updated_at", "2020-08-20 18:49:59.853661"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 1.0ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:49:59.900911"], ["updated_at", "2020-08-20 18:49:59.900911"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:49:59 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:50:48.704008"], ["updated_at", "2020-08-20 18:50:48.704008"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 633)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:50:48.748808"], ["updated_at", "2020-08-20 18:50:48.748808"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (3.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:50:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:51:44.357413"], ["updated_at", "2020-08-20 18:51:44.357413"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 1.0ms | Allocations: 633)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:51:44.401591"], ["updated_at", "2020-08-20 18:51:44.401591"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:51:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:53:22.918867"], ["updated_at", "2020-08-20 18:53:22.918867"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:53:22 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.6ms | Allocations: 633)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:53:22 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:53:22.964536"], ["updated_at", "2020-08-20 18:53:22.964536"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:53:22 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:53:22 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:53:22 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:53:22 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:53:23 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:54:12.050893"], ["updated_at", "2020-08-20 18:54:12.050893"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (2.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 2.1ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:54:12.098421"], ["updated_at", "2020-08-20 18:54:12.098421"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:12 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.9ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:54:44.308131"], ["updated_at", "2020-08-20 18:54:44.308131"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (11.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 11.7ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:54:44.356734"], ["updated_at", "2020-08-20 18:54:44.356734"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (2.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:54:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:55:13.670114"], ["updated_at", "2020-08-20 18:55:13.670114"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:55:13.712087"], ["updated_at", "2020-08-20 18:55:13.712087"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:55:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:56:13.085817"], ["updated_at", "2020-08-20 18:56:13.085817"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (4.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:56:13.129361"], ["updated_at", "2020-08-20 18:56:13.129361"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 5.1ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:13 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:56:44.379260"], ["updated_at", "2020-08-20 18:56:44.379260"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (4.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:56:44.429621"], ["updated_at", "2020-08-20 18:56:44.429621"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 4.4ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (3.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:56:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:57:29.449366"], ["updated_at", "2020-08-20 18:57:29.449366"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (5.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 5.5ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:57:29.497115"], ["updated_at", "2020-08-20 18:57:29.497115"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 806)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:57:29 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:58:34.824310"], ["updated_at", "2020-08-20 18:58:34.824310"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.9ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:58:34.871263"], ["updated_at", "2020-08-20 18:58:34.871263"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (6.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:58:34 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 18:59:15.547314"], ["updated_at", "2020-08-20 18:59:15.547314"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 633)
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 18:59:15.591315"], ["updated_at", "2020-08-20 18:59:15.591315"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 11:59:15 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks on the beach", "age"=>"4"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "walks on the beach"], ["created_at", "2020-08-20 18:59:15.647950"], ["updated_at", "2020-08-20 18:59:15.647950"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 799)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 19:02:02.117149"], ["updated_at", "2020-08-20 19:02:02.117149"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 19:02:02.158108"], ["updated_at", "2020-08-20 19:02:02.158108"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 806)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:02:02 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks on the beach", "age"=>"4"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "walks on the beach"], ["created_at", "2020-08-20 19:02:02.207359"], ["updated_at", "2020-08-20 19:02:02.207359"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 799)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 19:04:48.087546"], ["updated_at", "2020-08-20 19:04:48.087546"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 633)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 19:04:48.126445"], ["updated_at", "2020-08-20 19:04:48.126445"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:04:48 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks on the beach", "age"=>"4"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "walks on the beach"], ["created_at", "2020-08-20 19:04:48.175429"], ["updated_at", "2020-08-20 19:04:48.175429"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 799)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 19:12:44.342048"], ["updated_at", "2020-08-20 19:12:44.342048"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 19:12:44.378707"], ["updated_at", "2020-08-20 19:12:44.378707"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:12:44 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 19:16:49.453135"], ["updated_at", "2020-08-20 19:16:49.453135"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 19:16:49.490092"], ["updated_at", "2020-08-20 19:16:49.490092"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:16:49 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.9ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 19:17:50.347078"], ["updated_at", "2020-08-20 19:17:50.347078"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.3ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 19:17:50.385053"], ["updated_at", "2020-08-20 19:17:50.385053"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 12:17:50 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Felix"], ["lastName", "DeCat"], ["age", 2], ["enjoys", "Walks in the park"], ["created_at", "2020-08-20 20:08:43.627177"], ["updated_at", "2020-08-20 20:08:43.627177"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 633)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4", "enjoys"=>"Meow Mix, and plenty of sunshine."}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (1.0ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "Meow Mix, and plenty of sunshine."], ["created_at", "2020-08-20 20:08:43.675212"], ["updated_at", "2020-08-20 20:08:43.675212"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 806)
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2786)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"age"=>"2", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1634)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"Walks in the park"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1131)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1756)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/cats" for 127.0.0.1 at 2020-08-20 13:08:43 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"firstName"=>"Buster", "lastName"=>"Rhymes", "enjoys"=>"walks", "age"=>"4"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1115)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (1.2ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "walks on the beach"], ["created_at", "2020-08-20 20:51:45.433571"], ["updated_at", "2020-08-20 20:51:45.433571"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Update (1.2ms)[0m  [1m[33mUPDATE "cats" SET "firstName" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["firstName", "Busta"], ["updated_at", "2020-08-20 20:51:45.436684"], ["id", 56]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "walks on the beach"], ["created_at", "2020-08-20 20:56:21.869869"], ["updated_at", "2020-08-20 20:56:21.869869"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Buster"], ["lastName", "Rhymes"], ["age", 4], ["enjoys", "walks on the beach"], ["created_at", "2020-08-20 20:56:35.200526"], ["updated_at", "2020-08-20 20:56:35.200526"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m

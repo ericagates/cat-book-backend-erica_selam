@@ -41,30 +41,30 @@ RSpec.describe "Cats", type: :request do
         # Assure that the created cat has the correct attributes
         expect(cat.firstName).to eq 'Buster'
     end
-# update test
-    # it "updates a cat" do
-    #     # The params we are going to send with the request
-    #     cat_params = {
-    #     cat: {
-    #         firstName: 'Buster',
-    #         lastName: 'Rhymes',
-    #         age: 4,
-    #         enjoys: 'Meow Mix, and plenty of sunshine.'
-    #     }
-    #     }
+update test
+    it "updates a cat" do
+        # The params we are going to send with the request
+        cat_params = {
+        cat: {
+            firstName: 'Buster',
+            lastName: 'Rhymes',
+            age: 4,
+            enjoys: 'Meow Mix, and plenty of sunshine.'
+        }
+        }
     
-    #     # Send the request to the server
-    #     put '/cats/:id', params: cat_params
+        # Send the request to the server
+        put '/cats/:id', params: cat_params
     
-    #     # Assure that we get a success back
-    #     expect(response).to have_http_status(:ok)
+        # Assure that we get a success back
+        expect(response).to have_http_status(:ok)
     
-    #     # Look up the cat we expect to be created in the Database
-    #     cat = Cat.first
+        # Look up the cat we expect to be created in the Database
+        cat = Cat.first
     
-    #     # Assure that the created cat has the correct attributes
-    #     expect(cat.firstName).to eq 'Buster'
-    # end
+        # Assure that the created cat has the correct attributes
+        expect(cat.firstName).to eq 'Buster'
+    end
 
     it "doesn't create a cat without a first name" do
         cat_params = {
@@ -152,7 +152,8 @@ RSpec.describe "Cats", type: :request do
         # Convert the JSON response into a Ruby Hash
         json = JSON.parse(response.body)
         # Errors are returned as an array because there could be more than one, if there are more than one validation failures on an attribute.
-        expect(json['enjoys'].length).to be >= 10 
+      
+        expect(json['enjoys']).to include "is too short (minimum is 10 characters)"
     end
 
 end
