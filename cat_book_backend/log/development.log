@@ -464,3 +464,207 @@ Processing by CatsController#index as */*
 Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1426)
 
 
+Started GET "/" for ::1 at 2020-08-21 15:36:54 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.7ms | Allocations: 295)
+Completed 200 OK in 26ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 1639)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:37:15 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (20.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 58ms (Views: 17.7ms | ActiveRecord: 29.9ms | Allocations: 6320)
+
+
+Started DELETE "/cats/1" for ::1 at 2020-08-21 15:37:24 -0700
+Processing by CatsController#destroy as */*
+  Parameters: {"id"=>"1", "cat"=>{}}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+  [1m[36mCat Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cats" WHERE "cats"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+Completed 200 OK in 37ms (Views: 0.5ms | ActiveRecord: 24.4ms | Allocations: 3242)
+
+
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/cats" for ::1 at 2020-08-21 15:39:42 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as */*
+  [1m[36mCat Load (11.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 13.0ms | ActiveRecord: 18.0ms | Allocations: 6204)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:39:46 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (24.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 3.8ms | ActiveRecord: 24.0ms | Allocations: 1443)
+
+
+Started DELETE "/cats/5" for ::1 at 2020-08-21 15:40:06 -0700
+Processing by CatsController#destroy as */*
+  Parameters: {"id"=>"5", "cat"=>{}}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+  [1m[36mCat Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cats" WHERE "cats"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+Completed 200 OK in 45ms (Views: 0.4ms | ActiveRecord: 31.9ms | Allocations: 3243)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:40:09 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1314)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:41:51 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1314)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:42:35 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.3ms | Allocations: 1298)
+
+
+Started POST "/cats" for ::1 at 2020-08-21 15:43:00 -0700
+Processing by CatsController#create as */*
+  Parameters: {"firstName"=>"Ruh", "lastName"=>"Ruh", "age"=>"3", "enjoys"=>"Sneak attacks and long distance jumping.", "cat"=>{"firstName"=>"Ruh", "lastName"=>"Ruh", "age"=>"3", "enjoys"=>"Sneak attacks and long distance jumping."}}
+  [1m[35m (39.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:9:in `create'
+  [1m[36mCat Create (0.6ms)[0m  [1m[32mINSERT INTO "cats" ("firstName", "lastName", "age", "enjoys", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["firstName", "Ruh"], ["lastName", "Ruh"], ["age", 3], ["enjoys", "Sneak attacks and long distance jumping."], ["created_at", "2020-08-21 22:43:01.002955"], ["updated_at", "2020-08-21 22:43:01.002955"]]
+  ↳ app/controllers/cats_controller.rb:9:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:9:in `create'
+Completed 200 OK in 48ms (Views: 0.6ms | ActiveRecord: 40.2ms | Allocations: 2868)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:43:01 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1427)
+
+
+Started PATCH "/cats/6" for ::1 at 2020-08-21 15:43:21 -0700
+Processing by CatsController#update as */*
+  Parameters: {"firstName"=>"Ruh-Ruh", "lastName"=>"DaGhost", "age"=>"3", "enjoys"=>"Sneak attacks and long distance jumping.", "id"=>"6", "cat"=>{"firstName"=>"Ruh-Ruh", "lastName"=>"DaGhost", "age"=>"3", "enjoys"=>"Sneak attacks and long distance jumping."}}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:18:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+  [1m[36mCat Update (0.3ms)[0m  [1m[33mUPDATE "cats" SET "firstName" = $1, "lastName" = $2, "updated_at" = $3 WHERE "cats"."id" = $4[0m  [["firstName", "Ruh-Ruh"], ["lastName", "DaGhost"], ["updated_at", "2020-08-21 22:43:21.109371"], ["id", 6]]
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 3331)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:43:21 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1427)
+
+
+Started DELETE "/cats/6" for ::1 at 2020-08-21 15:43:31 -0700
+Processing by CatsController#destroy as */*
+  Parameters: {"id"=>"6", "cat"=>{}}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+  [1m[36mCat Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cats" WHERE "cats"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:29:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2728)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:43:31 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1298)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:45:27 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1298)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:46:15 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.5ms | Allocations: 1298)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:46:20 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1298)
+
+
+Started PATCH "/cats/4" for ::1 at 2020-08-21 15:46:34 -0700
+Processing by CatsController#update as */*
+  Parameters: {"firstName"=>"Jack", "lastName"=>"Smith", "age"=>"7", "enjoys"=>"Furrrrociously hunting bugs.", "id"=>"4", "cat"=>{"firstName"=>"Jack", "lastName"=>"Smith", "age"=>"7", "enjoys"=>"Furrrrociously hunting bugs."}}
+  [1m[36mCat Load (14.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:18:in `update'
+  [1m[35m (29.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+  [1m[36mCat Update (0.4ms)[0m  [1m[33mUPDATE "cats" SET "age" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["age", 7], ["updated_at", "2020-08-21 22:46:34.612203"], ["id", 4]]
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 45.2ms | Allocations: 3285)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:46:34 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1298)
+
+
+Started PATCH "/cats/4" for ::1 at 2020-08-21 15:46:41 -0700
+Processing by CatsController#update as */*
+  Parameters: {"firstName"=>"Jack", "lastName"=>"Smith", "age"=>"4", "enjoys"=>"Furrrrociously hunting bugs.", "id"=>"4", "cat"=>{"firstName"=>"Jack", "lastName"=>"Smith", "age"=>"4", "enjoys"=>"Furrrrociously hunting bugs."}}
+  [1m[36mCat Load (5.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:18:in `update'
+  [1m[35m (37.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+  [1m[36mCat Update (0.4ms)[0m  [1m[33mUPDATE "cats" SET "age" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["age", 4], ["updated_at", "2020-08-21 22:46:41.604050"], ["id", 4]]
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `update'
+Completed 200 OK in 53ms (Views: 0.4ms | ActiveRecord: 44.3ms | Allocations: 3285)
+
+
+Started GET "/cats" for ::1 at 2020-08-21 15:46:41 -0700
+Processing by CatsController#index as */*
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/controllers/cats_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1299)
+
+
